@@ -5,6 +5,7 @@ class Waypoint:
 	def __init__(self, pos=np.array([0., 0., 0.]), rotmat=np.eye(3)):
 		self.pos = pos
 		self.rotmat = rotmat
+
 class Move:
 	def __init__(self, point0=Waypoint(), point1=Waypoint(), move_type=None):
 		self.point0 = point0
@@ -12,11 +13,11 @@ class Move:
 		self.move_type = move_type
 
 class Contour:
-	def __init__(self, moves=[Move()]):
+	def __init__(self, moves=[]):
 		self.moves = moves
 
 class Segment:
-	def __init__(self, contours=[Contour()], segment_type=None):
+	def __init__(self, contours=[], segment_type=None):
 		self.contours = contours
 		self.segment_type = segment_type
 
